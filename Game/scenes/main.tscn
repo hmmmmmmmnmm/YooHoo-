@@ -1,0 +1,274 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/2D Pixel Dungeon Asset Pack/Dungeon_Tileset_at.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/enemy1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/TurnQueue.gd" type="Script" id=4]
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "Dungeon_Tileset_at.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 128, 256, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Dungeon_Tileset_at.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 96, 192, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Dungeon_Tileset_at.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 128, 192, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "Dungeon_Tileset_at.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 160, 192, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 4 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Dungeon_Tileset_at.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 320, 32, 32 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 5 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "Dungeon_Tileset_at.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 192, 448, 32, 32 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Dungeon_Tileset_at.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 288, 384, 32, 32 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Dungeon_Tileset_at.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 320, 256, 32, 32 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Dungeon_Tileset_at.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 32, 416, 32, 32 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Dungeon_Tileset_at.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 192, 256, 32, 32 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Dungeon_Tileset_at.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 128, 224, 32, 32 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Dungeon_Tileset_at.png 11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 96, 160, 32, 32 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Dungeon_Tileset_at.png 12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 448, 256, 32, 32 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 32
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -1441799, 1, 0, -1441798, 1, 0, -1441797, 1, 0, -1441796, 1, 0, -1441795, 1, 0, -1441794, 1, 0, -1441793, 1, 0, -1507328, 1, 0, -1507327, 1, 0, -1507326, 1, 0, -1507325, 1, 0, -1507324, 1, 0, -1507323, 1, 0, -1507322, 1, 0, -1507321, 1, 0, -1507320, 1, 0, -1376264, 3, 0, -1376263, 9, 0, -1376262, 9, 0, -1376261, 9, 0, -1376260, 9, 0, -1376259, 9, 0, -1376258, 9, 0, -1376257, 9, 0, -1441792, 9, 0, -1441791, 9, 0, -1441790, 9, 0, -1441789, 9, 0, -1441788, 9, 0, -1441787, 9, 0, -1441786, 9, 0, -1441785, 9, 0, -1441784, 9, 0, -1441783, 2, 0, -1310728, 3, 0, -1310727, 9, 0, -1310726, 9, 0, -1310725, 9, 0, -1310724, 9, 0, -1310723, 9, 0, -1310722, 9, 0, -1310721, 9, 0, -1376256, 9, 0, -1376255, 9, 0, -1376254, 9, 0, -1376253, 9, 0, -1376252, 9, 0, -1376251, 9, 0, -1376250, 9, 0, -1376249, 9, 0, -1376248, 9, 0, -1376247, 2, 0, -1245192, 3, 0, -1245191, 9, 0, -1245190, 9, 0, -1245189, 9, 0, -1245188, 9, 0, -1245187, 9, 0, -1245186, 9, 0, -1245185, 9, 0, -1310720, 9, 0, -1310719, 9, 0, -1310718, 9, 0, -1310717, 9, 0, -1310716, 9, 0, -1310715, 9, 0, -1310714, 9, 0, -1310713, 9, 0, -1310712, 9, 0, -1310711, 2, 0, -1179656, 3, 0, -1179655, 9, 0, -1179654, 9, 0, -1179653, 9, 0, -1179652, 9, 0, -1179651, 9, 0, -1179650, 9, 0, -1179649, 9, 0, -1245184, 9, 0, -1245183, 9, 0, -1245182, 9, 0, -1245181, 9, 0, -1245180, 9, 0, -1245179, 9, 0, -1245178, 9, 0, -1245177, 9, 0, -1245176, 9, 0, -1245175, 2, 0, -1114120, 3, 0, -1114119, 9, 0, -1114118, 9, 0, -1114117, 9, 0, -1114116, 9, 0, -1114115, 9, 0, -1114114, 9, 0, -1114113, 9, 0, -1179648, 9, 0, -1179647, 9, 0, -1179646, 9, 0, -1179645, 9, 0, -1179644, 9, 0, -1179643, 9, 0, -1179642, 9, 0, -1179641, 9, 0, -1179640, 9, 0, -1179639, 2, 0, -1048584, 3, 0, -1048583, 9, 0, -1048582, 9, 0, -1048581, 9, 0, -1048580, 9, 0, -1048579, 9, 0, -1048578, 9, 0, -1048577, 9, 0, -1114112, 9, 0, -1114111, 9, 0, -1114110, 9, 0, -1114109, 9, 0, -1114108, 9, 0, -1114107, 9, 0, -1114106, 9, 0, -1114105, 9, 0, -1114104, 9, 0, -1114103, 2, 0, -983048, 3, 0, -983047, 9, 0, -983046, 9, 0, -983045, 9, 0, -983044, 9, 0, -983043, 9, 0, -983042, 9, 0, -983041, 9, 0, -1048576, 9, 0, -1048575, 9, 0, -1048574, 9, 0, -1048573, 9, 0, -1048572, 9, 0, -1048571, 9, 0, -1048570, 9, 0, -1048569, 9, 0, -1048568, 9, 0, -1048567, 2, 0, -917512, 3, 0, -917511, 9, 0, -917510, 9, 0, -917509, 9, 0, -917508, 9, 0, -917507, 9, 0, -917506, 9, 0, -917505, 9, 0, -983040, 9, 0, -983039, 9, 0, -983038, 9, 0, -983037, 9, 0, -983036, 9, 0, -983035, 9, 0, -983034, 9, 0, -983033, 9, 0, -983032, 9, 0, -983031, 2, 0, -851975, 4, 0, -851974, 4, 0, -851973, 4, 0, -851972, 4, 0, -851971, 4, 0, -851970, 4, 0, -851969, 1, 0, -917504, 0, 0, -917503, 0, 0, -917502, 1, 0, -917501, 4, 0, -917500, 4, 0, -917499, 4, 0, -917498, 4, 0, -917497, 4, 0, -917496, 4, 0, -786433, 3, 0, -851968, 5, 0, -851967, 0, 0, -851966, 2, 0, -720897, 3, 0, -786432, 0, 0, -786431, 0, 0, -786430, 2, 0, -655361, 3, 0, -720896, 0, 0, -720895, 0, 0, -720894, 2, 0, -589825, 3, 0, -655360, 0, 0, -655359, 0, 0, -655358, 2, 0, -524289, 3, 0, -589824, 0, 0, -589823, 0, 0, -589822, 2, 0, -458753, 3, 0, -524288, 0, 0, -524287, 0, 0, -524286, 2, 0, -393217, 3, 0, -458752, 0, 0, -458751, 0, 0, -458750, 2, 0, -327681, 3, 0, -393216, 0, 0, -393215, 0, 0, -393214, 2, 0, -262150, 1, 0, -262149, 1, 0, -262148, 1, 0, -262147, 1, 0, -262146, 1, 0, -262145, 1, 0, -327680, 0, 0, -327679, 0, 0, -327678, 1, 0, -327677, 1, 0, -327676, 1, 0, -327675, 1, 0, -196615, 3, 0, -196614, 9, 0, -196613, 9, 0, -196612, 9, 0, -196611, 9, 0, -196610, 9, 0, -196609, 9, 0, -262144, 9, 0, -262143, 9, 0, -262142, 9, 0, -262141, 9, 0, -262140, 9, 0, -262139, 9, 0, -262138, 2, 0, -131079, 3, 0, -131078, 9, 0, -131077, 9, 0, -131076, 9, 0, -131075, 9, 0, -131074, 9, 0, -131073, 9, 0, -196608, 9, 0, -196607, 9, 0, -196606, 9, 0, -196605, 9, 0, -196604, 9, 0, -196603, 9, 0, -196602, 2, 0, -65543, 3, 0, -65542, 9, 0, -65541, 9, 0, -65540, 9, 0, -65539, 9, 0, -65538, 9, 0, -65537, 9, 0, -131072, 9, 0, -131071, 9, 0, -131070, 9, 0, -131069, 9, 0, -131068, 9, 0, -131067, 9, 0, -131066, 2, 0, -7, 3, 0, -6, 9, 0, -5, 9, 0, -4, 9, 0, -3, 9, 0, -2, 9, 0, -1, 9, 0, -65536, 9, 0, -65535, 9, 0, -65534, 9, 0, -65533, 9, 0, -65532, 9, 0, -65531, 9, 0, -65530, 2, 0, 65529, 3, 0, 65530, 9, 0, 65531, 9, 0, 65532, 9, 0, 65533, 9, 0, 65534, 9, 0, 65535, 9, 0, 0, 9, 0, 1, 9, 0, 2, 9, 0, 3, 9, 0, 4, 9, 0, 5, 9, 0, 6, 2, 0, 131065, 3, 0, 131066, 9, 0, 131067, 9, 0, 131068, 9, 0, 131069, 9, 0, 131070, 9, 0, 131071, 9, 0, 65536, 9, 0, 65537, 9, 0, 65538, 9, 0, 65539, 9, 0, 65540, 9, 0, 65541, 9, 0, 65542, 2, 0, 196601, 3, 0, 196602, 9, 0, 196603, 9, 0, 196604, 9, 0, 196605, 9, 0, 196606, 9, 0, 196607, 9, 0, 131072, 9, 0, 131073, 9, 0, 131074, 9, 0, 131075, 9, 0, 131076, 9, 0, 131077, 9, 0, 131078, 2, 0, 262137, 3, 0, 262138, 9, 0, 262139, 9, 0, 262140, 9, 0, 262141, 9, 0, 262142, 9, 0, 262143, 9, 0, 196608, 9, 0, 196609, 9, 0, 196610, 9, 0, 196611, 9, 0, 196612, 9, 0, 196613, 9, 0, 196614, 2, 0, 327673, 3, 0, 327674, 9, 0, 327675, 9, 0, 327676, 9, 0, 327677, 9, 0, 327678, 9, 0, 327679, 9, 0, 262144, 9, 0, 262145, 9, 0, 262146, 9, 0, 262147, 9, 0, 262148, 9, 0, 262149, 9, 0, 262150, 2, 0, 393210, 4, 0, 393211, 4, 0, 393212, 4, 0, 393213, 4, 0, 393214, 4, 0, 393215, 4, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0 )
+
+[node name="TurnQueue" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Player" parent="TurnQueue" instance=ExtResource( 2 )]
+position = Vector2( -8, 104 )
+
+[node name="Camera2D" type="Camera2D" parent="TurnQueue/Player"]
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="enemies" type="Node2D" parent="."]
+position = Vector2( 0, -8 )
+
+[node name="enemy1" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 48, -144 )
+
+[node name="enemy2" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( -48, -144 )
+
+[node name="enemy3" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 192, -680 )
+
+[node name="enemy4" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 96, -680 )
+
+[node name="enemy5" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( -96, -680 )
+
+[node name="enemy6" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( -192, -680 )
+
+[node name="enemy7" parent="enemies" instance=ExtResource( 3 )]
+position = Vector2( 0, -680 )
