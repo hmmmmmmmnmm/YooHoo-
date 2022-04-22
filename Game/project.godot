@@ -24,6 +24,10 @@ config/name="Game"
 run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+BackgroundMusic="*res://scenes/background_music.tscn"
+
 [importer_defaults]
 
 texture={

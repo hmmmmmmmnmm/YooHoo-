@@ -11,6 +11,7 @@ var inputs = { "right" : Vector2.RIGHT,
 				'down' : Vector2.DOWN}
 			
 func _ready():
+	self.set_position(Vector2(0,0))
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size/2
 	

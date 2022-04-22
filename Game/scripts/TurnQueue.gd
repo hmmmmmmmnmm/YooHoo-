@@ -11,7 +11,6 @@ func _ready():
 	
 func turns():
 	while true:
-		print(active_character)
 		if active_character == get_child(0):
 			get_node("Player").player_turn = true
 		yield(active_character,"complete")

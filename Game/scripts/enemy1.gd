@@ -17,7 +17,7 @@ func _ready():
 	yield(self,"tree_entered")
 	rng.randomize()
 	while true:
-		yield(get_parent(),"next")
+		yield(get_node("/root/Node2D/TurnQueue"),"next")
 		if get_parent().active_character == self:
 			yield(get_tree().create_timer(0.01), "timeout")
 			if moving == true:
