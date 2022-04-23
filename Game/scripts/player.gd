@@ -47,4 +47,4 @@ func move(dir):
 		position += inputs[dir] * tile_size
 		
 func attack(target):
-	target.get_child(5).take_damage(damage)
+	target.get_node("enemy_stats").take_damage(damage)

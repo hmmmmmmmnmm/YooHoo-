@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/custoom/1x.png" type="Texture" id=1]
 [ext_resource path="res://scripts/player.gd" type="Script" id=2]
 [ext_resource path="res://scripts/player_stats.gd" type="Script" id=3]
 [ext_resource path="res://scripts/death_screen.gd" type="Script" id=4]
 [ext_resource path="res://assets/custoom/4x.webp" type="Texture" id=5]
+[ext_resource path="res://scripts/HPbar.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 8 )
+extents = Vector2( 10, 8 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 1, 0, 0, 1 )
 
 [node name="Area2D" type="Area2D"]
 z_index = 1
@@ -35,4 +39,18 @@ margin_bottom = 128.0
 texture = ExtResource( 5 )
 script = ExtResource( 4 )
 
+[node name="HPbar" type="ProgressBar" parent="."]
+margin_left = -16.0
+margin_top = -24.0
+margin_right = 16.0
+margin_bottom = -16.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_styles/fg = SubResource( 2 )
+max_value = 20.0
+value = 20.0
+percent_visible = false
+script = ExtResource( 6 )
+
+[connection signal="damage_taken" from="stats" to="HPbar" method="_on_stats_damage_taken"]
 [connection signal="death_screen" from="stats" to="TextureRect" method="_on_stats_death_screen"]

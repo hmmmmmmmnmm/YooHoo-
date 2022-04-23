@@ -26,6 +26,7 @@ func change_room():
 		next_room = next_pool.get_child(0)
 		next_pool.remove_child(next_room)
 		yield(get_tree().create_timer(0.05), "timeout")
+		next_room.visible = true
 		current_room.replace_by(next_room)
 		next_pool.queue_free()
 		next_room.get_children()[-1].queue_free()

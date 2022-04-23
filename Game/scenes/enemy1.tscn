@@ -1,14 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/custoom/1x.webp" type="Texture" id=1]
 [ext_resource path="res://scripts/enemy1.gd" type="Script" id=2]
 [ext_resource path="res://scripts/enemy1_stats.gd" type="Script" id=3]
+[ext_resource path="res://scripts/enemy_HPbar.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 96, 96 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.988235, 0.0156863, 0.0156863, 1 )
 
 [node name="enemy1" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -36,8 +40,19 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="aggro"]
 shape = SubResource( 2 )
 
-[node name="enemy1_stats" type="Node" parent="."]
+[node name="enemy_stats" type="Node" parent="."]
 script = ExtResource( 3 )
+
+[node name="HPbar" type="ProgressBar" parent="."]
+margin_left = -16.0
+margin_top = -24.0
+margin_right = 16.0
+margin_bottom = -16.0
+custom_styles/fg = SubResource( 3 )
+max_value = 10.0
+value = 10.0
+percent_visible = false
+script = ExtResource( 4 )
 
 [connection signal="area_entered" from="attack_detect" to="." method="_on_attack_detect_area_entered"]
 [connection signal="area_exited" from="attack_detect" to="." method="_on_attack_detect_area_exited"]

@@ -1,9 +1,7 @@
 extends Node
-
 signal damage_taken
-
-var hp = 10
-var enemy1_damage = 10
+var hp = 50
+var enemy1_damage = 5
 
 func take_damage(amount):
 		hp = hp - amount
